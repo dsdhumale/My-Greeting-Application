@@ -26,4 +26,5 @@ public class MyGreetingController {
                    String.format(template, name));
     }
     
+    
 }
