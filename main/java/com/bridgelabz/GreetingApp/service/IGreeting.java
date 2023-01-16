@@ -15,4 +15,6 @@ public interface IGreeting {
     public Optional<Greeting> findGreeting(long id);
 
     public List<Greeting> findAllGreeting();
+
+    public void deleteGreetingId(long id);
 }

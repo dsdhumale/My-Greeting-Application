@@ -39,7 +39,6 @@ public class GreetingService implements IGreeting {
 
     }
 
-    
     @Override
     public Optional<Greeting> findGreeting(long id) {
         return greetingRepo.findById(id);
@@ -48,6 +47,11 @@ public class GreetingService implements IGreeting {
     @Override
     public List<Greeting> findAllGreeting() {
         return greetingRepo.findAll();
+    }
+
+    @Override
+    public void deleteGreetingId(long id) {
+        greetingRepo.deleteById(id);
     }
 
 }

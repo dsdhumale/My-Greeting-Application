@@ -54,14 +54,18 @@ public class MyGreetingController {
     }
 
     @GetMapping("/{id}")
-    public Optional<Greeting> findGreeting(@PathVariable long id){
+    public Optional<Greeting> findGreeting(@PathVariable long id) {
         return greet.findGreeting(id);
     }
 
     @GetMapping("/findAll")
-    public List<Greeting> findAllGreeting(){
+    public List<Greeting> findAllGreeting() {
         return greet.findAllGreeting();
     }
 
+    @DeleteMapping("/{id}")
+    public void deleteGreets(@PathVariable long id) {
+        greet.deleteGreetingId(id);
+    }
 
 }
