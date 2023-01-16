@@ -29,21 +29,27 @@ public class MyGreetingController {
 
     private static final String template = "Hello, %s!";
     private final AtomicLong counter = new AtomicLong();
-    
-    @GetMapping(value = {"/greeting", "/greeting/home"})
+
+    @GetMapping(value = { "/greeting", "/greeting/home" })
     public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
     @GetMapping("/param/{name}")
-    public Greeting greetingParam(@PathVariable String name){
+    public Greeting greetingParam(@PathVariable String name) {
         return new Greeting(counter.incrementAndGet(),
-                   String.format(template, name));
+                String.format(template, name));
     }
 
     @GetMapping("/simple")
-    public Greeting newGreeting(@RequestParam(value = "name", defaultValue = "World") String name){
+    public Greeting newGreeting(@RequestParam(value = "name", defaultValue = "World") String name) {
         return greet.newGreeting(name);
     }
-    
+
+    @PostMapping("/add")
+    public Greeting addGreeting(@RequestParam(value = "name", defaultValue = "World") String name) {
+        User user = new User();
+        user.setFirstName(name);
+        return greet.addGreeting(user);
+    }
 }

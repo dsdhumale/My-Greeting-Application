@@ -7,8 +7,8 @@ import com.bridgelabz.GreetingApp.model.Greeting;
 import com.bridgelabz.GreetingApp.model.User;
 
 public interface IGreeting {
-    
+
     public Greeting newGreeting(String name);
 
-   
+    public Greeting addGreeting(User user);
 }
