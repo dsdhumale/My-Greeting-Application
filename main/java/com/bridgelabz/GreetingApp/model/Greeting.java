@@ -1,6 +1,11 @@
 package com.bridgelabz.GreetingApp.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
 public class Greeting {
+    @Id
     private long id;
     private String message;
 
@@ -8,6 +13,7 @@ public class Greeting {
         this.id = id;
         this.message = message;
     }
+    public Greeting(){}
 
     public long getId() {
         return id;
@@ -23,5 +29,9 @@ public class Greeting {
 
     public void setMessage(String message) {
         this.message = message;
+    }
+
+    public Greeting addGreeting(Greeting greet) {
+        return null;
     }
 }

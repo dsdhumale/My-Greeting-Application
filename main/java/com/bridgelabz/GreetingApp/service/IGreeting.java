@@ -1,6 +1,14 @@
 package com.bridgelabz.GreetingApp.service;
 
+import java.util.List;
+import java.util.Optional;
+
+import com.bridgelabz.GreetingApp.model.Greeting;
+import com.bridgelabz.GreetingApp.model.User;
+
 public interface IGreeting {
     
-    public String newGreeting();
+    public Greeting newGreeting(String name);
+
+   
 }

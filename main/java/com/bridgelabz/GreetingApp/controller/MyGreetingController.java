@@ -1,19 +1,28 @@
 package com.bridgelabz.GreetingApp.controller;
 
+import java.util.List;
+import java.util.Optional;
 import java.util.concurrent.atomic.AtomicLong;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.GreetingApp.model.Greeting;
+import com.bridgelabz.GreetingApp.model.User;
 import com.bridgelabz.GreetingApp.service.GreetingService;
 import com.bridgelabz.GreetingApp.service.IGreeting;
 
 @RestController
 public class MyGreetingController {
+
+    @Autowired
+    private IGreeting greet;
 
     @Autowired
     private GreetingService greetingService;
@@ -33,10 +42,8 @@ public class MyGreetingController {
     }
 
     @GetMapping("/simple")
-    public String newGreeting(){
-        return greetingService.newGreeting();
-
+    public Greeting newGreeting(@RequestParam(value = "name", defaultValue = "World") String name){
+        return greet.newGreeting(name);
     }
-
     
 }
