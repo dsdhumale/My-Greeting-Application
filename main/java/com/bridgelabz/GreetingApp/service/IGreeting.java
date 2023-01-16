@@ -13,4 +13,6 @@ public interface IGreeting {
     public Greeting addGreeting(User user);
 
     public Optional<Greeting> findGreeting(long id);
+
+    public List<Greeting> findAllGreeting();
 }

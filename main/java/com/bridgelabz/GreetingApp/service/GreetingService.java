@@ -45,4 +45,9 @@ public class GreetingService implements IGreeting {
         return greetingRepo.findById(id);
     }
 
+    @Override
+    public List<Greeting> findAllGreeting() {
+        return greetingRepo.findAll();
+    }
+
 }

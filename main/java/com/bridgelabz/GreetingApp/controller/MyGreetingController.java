@@ -58,6 +58,10 @@ public class MyGreetingController {
         return greet.findGreeting(id);
     }
 
-    
+    @GetMapping("/findAll")
+    public List<Greeting> findAllGreeting(){
+        return greet.findAllGreeting();
+    }
+
 
 }
