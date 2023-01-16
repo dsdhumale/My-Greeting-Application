@@ -11,4 +11,6 @@ public interface IGreeting {
     public Greeting newGreeting(String name);
 
     public Greeting addGreeting(User user);
+
+    public Optional<Greeting> findGreeting(long id);
 }

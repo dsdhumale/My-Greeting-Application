@@ -39,4 +39,10 @@ public class GreetingService implements IGreeting {
 
     }
 
+    
+    @Override
+    public Optional<Greeting> findGreeting(long id) {
+        return greetingRepo.findById(id);
+    }
+
 }

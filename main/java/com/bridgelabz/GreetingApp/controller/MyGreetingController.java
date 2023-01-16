@@ -52,4 +52,12 @@ public class MyGreetingController {
         user.setFirstName(name);
         return greet.addGreeting(user);
     }
+
+    @GetMapping("/{id}")
+    public Optional<Greeting> findGreeting(@PathVariable long id){
+        return greet.findGreeting(id);
+    }
+
+    
+
 }
