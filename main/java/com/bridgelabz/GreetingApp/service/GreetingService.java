@@ -7,7 +7,7 @@ import java.util.concurrent.atomic.AtomicLong;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import com.bridgelabz.GreetingApp.model.Greeting;
-import com.bridgelabz.GreetingApp.model.User;
+import com.bridgelabz.GreetingApp.dto.User;
 import com.bridgelabz.GreetingApp.repository.GreetingRepository;
 
 @Service

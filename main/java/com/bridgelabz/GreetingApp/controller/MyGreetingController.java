@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bridgelabz.GreetingApp.model.Greeting;
-import com.bridgelabz.GreetingApp.model.User;
+import com.bridgelabz.GreetingApp.dto.User;
 import com.bridgelabz.GreetingApp.service.GreetingService;
 import com.bridgelabz.GreetingApp.service.IGreeting;
 

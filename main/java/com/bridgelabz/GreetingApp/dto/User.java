@@ -1,4 +1,4 @@
-package com.bridgelabz.GreetingApp.model;
+package com.bridgelabz.GreetingApp.dto;
 
 public class User {
     String firstName;

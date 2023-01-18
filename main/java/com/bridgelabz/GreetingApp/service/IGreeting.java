@@ -4,7 +4,7 @@ import java.util.List;
 import java.util.Optional;
 
 import com.bridgelabz.GreetingApp.model.Greeting;
-import com.bridgelabz.GreetingApp.model.User;
+import com.bridgelabz.GreetingApp.dto.User;
 
 public interface IGreeting {
 
